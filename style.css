@@ -1,0 +1,28 @@
+::-webkit-scrollbar{
+    width: 0 !important;
+    height: 0 !important;
+}
+.text-lg-sm{
+    font-size: 0.7rem !important;
+}
+.create-btn:hover{
+cursor: pointer;
+background-color: lightgray;
+border-radius: 10px;
+}
+.content-items:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.temp-color{
+    background-color: red;
+}
+.temp-color2{
+    background-color: blue;
+}
+
+@media (min-width:1200px){
+    .text-lg-sm{
+        font-size: 1rem !important;
+    }
+}
