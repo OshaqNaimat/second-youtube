@@ -20,9 +20,33 @@ border-radius: 10px;
 .temp-color2{
     background-color: blue;
 }
+.close:hover{
+    cursor: pointer;
+}
+
+@media (max-width:1000px){
+    .search-bar{
+        display: none !important;
+    }
+    .gayab{
+        display: none !important;
+    }
+}
+@media (max-width:991px){
+    .my-single-image img{
+      height: 200px !important;
+    }
+}
+@media (max-width:575px){
+   .my-single-video{
+    height: 250px !important;
+   
+   }
+}
 
 @media (min-width:1200px){
     .text-lg-sm{
         font-size: 1rem !important;
     }
 }
+

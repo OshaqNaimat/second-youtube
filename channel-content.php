@@ -1,3 +1,4 @@
+<?php include './boostrap.php'?>
 <style>
     @media (max-width:1201px){
         .c-name{
@@ -14,7 +15,7 @@
 </style>
 
 <div class="container-fluid">
-    <?php include './studio-navbar.php'?>
+     <?php include './studio-navbar.php'?>
 
     <div class="row" style="height: 100vh;">
         <!-- Sidebar -->
@@ -67,7 +68,7 @@
                 </div>
             </div>
             <hr>
-            <div class="position-sticky bottom-0 bg-white">
+            <div class="position-sticky bottom-0 ">
                 <div class="d-flex content-items p-2 gap-2 rounded-2">
                     <i class="bi bi-gear c-icon"></i>
                     <span class="c-name ">Setting</span>

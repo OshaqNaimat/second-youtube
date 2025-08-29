@@ -1,3 +1,6 @@
+<?php
+ session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,9 +21,11 @@
                 <?php include './sidebar.php' ?>
             </ul>
             <div class="col-xl-10 main-content col-md-11 col-sm-12 p-3" style="overflow-y: scroll;height:98vh">
-                <?php include './main-content.php' ?>
+                <?php include './main-content.php'?>
                 <!-- shorts -->
                 <?php include './shorts.php' ?>
+                <!-- video playing -->
+                 <?php include './video-play.php'?>
             </div>
         </div>
     </div>
@@ -38,7 +43,7 @@
     let sidebar = document.querySelector('.sidebar-parent');
     let main = document.querySelector('.main-content');
    
-
+    let btns = document.querySelectorAll('.create-btn')
 
 
     if (list) {
@@ -52,14 +57,30 @@
         });
     }
 
+    // if (create_video) {
+    //     create_video.addEventListener('click', () => {
+    //         create_video_option.classList.remove('d-none');
+    //     });
+        // create_video.addEventListener('focusout', () => {
+        //     create_video_option.classList.add('d-none');
+        // });
+    // }
     if (create_video) {
-        create_video.addEventListener('focus', () => {
+    create_video.addEventListener('click', (e) => {
+        // Only toggle the menu if you click the button itself, not the link
+        if (e.target.closest('a') === null) {
             create_video_option.classList.remove('d-none');
-        });
-        create_video.addEventListener('focusout', () => {
-            create_video_option.classList.add('d-none');
-        });
-    }
+        }
+    });
+}
+
+
+
+    // 
+
+    // console.log(create_video_option) 
+
+
 
     if (search && search_icon && drop_list) {
         search.addEventListener('focus', () => {

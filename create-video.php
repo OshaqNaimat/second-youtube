@@ -14,13 +14,14 @@
     <!-- first form -->
 
     <form method="POST" action="./upload-video.php" enctype="multipart/form-data" 
-        
+        style="background-color: rgba(0, 0, 0, 0.7);"
         class="d-flex justify-content-center align-items-center overlay position-fixed top-0 w-100 min-vh-100 ">
-            <?php include './channel-content.php'?>
-        <div class="col-xl-7 col-lg-9 col-11 mx-auto first-form d-none position-absolute bg-white rounded-4">
+        
+            <!-- Have to include channel-content.php file -->
+        <div class="col-xl-7 col-lg-9 col-11 mx-auto first-form position-absolute bg-white rounded-4">
             <div class="d-flex justify-content-between p-3">
                 <h5 class="m-0">Upload Videos</h5>
-                <i class="bi bi-x-lg"></i>
+                <i class="bi bi-x-lg close"></i>
             </div>
             <hr class="m-1">
             <div class="d-flex flex-column justify-content-center align-items-center" style="height: 350px;">

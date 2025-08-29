@@ -9,4 +9,4 @@
     href="https://static.vecteezy.com/system/resources/thumbnails/018/930/575/small_2x/youtube-logo-youtube-icon-transparent-free-png.png"
     type="image/x-icon">
 
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./style.css">

@@ -53,6 +53,11 @@
 
         <!-- create section -->
         <div class="d-flex gap-3 align-items-center ">
+            <?php 
+            if(isset($_SESSION['ticket'])){
+                echo "<h6>Welcome {$_SESSION['ticket']}</h6>";
+            }
+            ?>
             <button
                 class="btn btn-outline-dark create-video d-flex align-items-center fw-semibold rounded-pill position-relative">
                 <i class="bi bi-plus fs-5"></i>
@@ -64,10 +69,13 @@
                     
                    
                     <div class="d-flex align-items-center" >
-                        <li>
+                        <a href="./create-video.php">
+
+                            <li>
                                 <i class="bi bi-play-btn px-1"></i>
                                 Upload Video
                             </li>
+                        </a>
                         </div>
                     
 

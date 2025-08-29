@@ -1,7 +1,9 @@
-<style>
+<?php include './boostrap.php'?>
+<?php include './navbar.php'?>
 
-</style>
+
 <div class="d-flex categories overflow-hidden gap-3">
+    
     <button class='btn rounded-3 btn-dark'>
         All
     </button>
@@ -41,16 +43,15 @@
 
 
 <div class="row my-4">
-
     <?php 
         include './config.php';
         $videos = "SELECT * FROM video_preview";
         $result = mysqli_query($connection,$videos);
         foreach($result as $item){
     ?>
-
+   
     <div class="col-xl-4 col-lg-6 col-md-6">
-        <div class="card overflow-hidden rounded-4 border-0 ">
+        <a href="./video-play.php?id=<?php echo $item['id']?>&title = <?php echo $item['title']?>&video = <?php echo $item['video']?>&thumbnail = <?php echo $item['thumbnail']?> " class="card text-decoration-none overflow-hidden rounded-4 border-0 ">
             <img class="rounded-4 thumbnail-image object-fit-cover" height="250px"
                 src="./thumbnail/<?php echo $item['thumbnail'] ?>" width="100%" alt="">
             <video controls muted height="250px" class="object-fit-cover thumbnail-video rounded-4 d-none"
@@ -72,7 +73,7 @@
                 </div>
                 <i class="bi bi-three-dots-vertical"></i>
             </div>
-        </div>
+        </a>
     </div>
 
     <?php 

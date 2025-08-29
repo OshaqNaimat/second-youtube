@@ -11,6 +11,13 @@ let fourth_form = document.querySelector('.fourth-form')
 let video_elements_btn = document.querySelector('.video-elements-btn')
 let back_second = document.querySelectorAll('.back-second')
 let third_btn = document.querySelector('.third-btn')
+let close = document.querySelector('.close')
+let overlay= document.querySelector('.overlay')
+
+close.addEventListener('click',()=>{
+  first_form.classList.add('d-none')
+  overlay.style.removeProperty("background-color");
+})
 
 
 
