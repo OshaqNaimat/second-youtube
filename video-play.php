@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-lg-9">
                     <video class="rounded-4 object-fit-cover my-single-video" src="./videos/<?php echo $_GET['video']?>" width="100%" height="450px" controls></video>
-                    <h4 class="my-2">Video title</h4>
+                    <h4 class="my-2"><?php echo $_GET['title']?></h4>
                   <div class="row align-items-center">
                     <div class="col-md-6 d-flex align-items-center my-2">
                         <div class="d-flex align-items-center gap-3">

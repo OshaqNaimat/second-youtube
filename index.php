@@ -23,9 +23,7 @@
             <div class="col-xl-10 main-content col-md-11 col-sm-12 p-3" style="overflow-y: scroll;height:98vh">
                 <?php include './main-content.php'?>
                 <!-- shorts -->
-                <?php include './shorts.php' ?>
-                <!-- video playing -->
-                 <?php include './video-play.php'?>
+               
             </div>
         </div>
     </div>
@@ -42,8 +40,16 @@
     let sidebar_li = document.querySelectorAll('.top-sidebar');
     let sidebar = document.querySelector('.sidebar-parent');
     let main = document.querySelector('.main-content');
+    let btns = document.querySelectorAll('.create-btn');
+    let log_form = document.querySelector('.log-form');
+    let log_icon = document.querySelector('.log-icon');
    
-    let btns = document.querySelectorAll('.create-btn')
+    log_icon.addEventListener('click',(e)=>{
+        e.preventDefault();
+        log_form.classList.toggle('d-none');
+        // log_form.classList.add('d-flex');
+    })
+
 
 
     if (list) {
@@ -72,7 +78,8 @@
             create_video_option.classList.remove('d-none');
         }
     });
-}
+    
+    }
 
 
 
@@ -118,6 +125,8 @@
     
 //    window.location.href = 'http://localhost:3000/create-video.php';    
 // })
+
+
 </script>
 
 

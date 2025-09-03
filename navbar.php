@@ -1,9 +1,12 @@
+
 <div class="bg-white z-3 position-sticky top-0">
     <div class="d-flex justify-content-between p-3 gap-3 align-items-center  ">
         <div class="d-flex align-items-center gap-4">
             <i class="bi bi-list nav-list fs-2 text-dark"></i>
             <div class="d-flex">
-                <img src="./assets/images/logo.svg" alt="">
+                <a href="./index.php">
+                    <img src="./assets/images/logo.svg" alt="">
+                </a>
                 <sup class="text-secondary">PK</sup>
             </div>
         </div>
@@ -52,24 +55,27 @@
 
 
         <!-- create section -->
-        <div class="d-flex gap-3 align-items-center ">
+        <d  iv class="d-flex gap-3 align-items-center ">
             <?php 
             if(isset($_SESSION['ticket'])){
-                echo "<h6>Welcome {$_SESSION['ticket']}</h6>";
+                echo "
+                <h6>Welcome {$_SESSION['ticket']}</h6>
+                
+                ";
             }
             ?>
             <button
-                class="btn btn-outline-dark create-video d-flex align-items-center fw-semibold rounded-pill position-relative">
-                <i class="bi bi-plus fs-5"></i>
+                class='btn btn-outline-dark create-video d-flex align-items-center fw-semibold rounded-pill position-relative'>
+                <i class='bi bi-plus fs-5'></i>
                 <span>Create</span>
             </button>
             <div class="d-none  create-video-option position-absolute bg-white shadow rounded-2 px-2"
-                style="top: 90%;width: 150px;">
+                style="top: 90%;width: 150px;right: 40px;">
                 <ul class="list-unstyled create-btn">
                     
                    
                     <div class="d-flex align-items-center" >
-                        <a href="./create-video.php">
+                        <a href="./create-video.php" class="text-decoration-none text-dark">
 
                             <li>
                                 <i class="bi bi-play-btn px-1"></i>
@@ -92,14 +98,40 @@
                 </ul>
             </div>
 
-            <div class="position-relative">
+            <div   class="position-relative">
                 <a href="#" class="text-dark"><i class="bi bi-bell fs-5"></i></a>
                 <p style="right: -10px;font-size: 10px;"
                     class="position-absolute  m-0 bg-danger text-white fw-bold top-0 px-1 rounded-pill">9+</p>
             </div>
 
-            <a href="#" class="text-dark"><i class="bi bi-person fs-4"></i></a>
-        </div>
+            <a href="./login-form.php" class="text-dark position-relative log-icon"><i class="bi bi-person fs-4"></i>
+
+            <!-- login-signup k shashke  -->
+           <div class="d-none log-form px-2 justify-content-center position-absolute bg-white shadow rounded-3 align-items-center" style="top: 110%;width: 150px;right: 0;">
+            <ul class="list-unstyled my-2">
+               
+                  <li class="bg-primary px-4 mb-2 rounded-pill">
+                  <a href="./logout.php" class="text-decoration-none text-white">
+                    Log in <i class="bi bi-box-arrow-in-right mx-2"></i>
+                </a>
+            </li>
+              
+                <li class="bg-danger px-3 rounded-pill">
+                    <a href="#" class="text-white text-decoration-none">
+                    Log out<i class="bi bi-box-arrow-left mx-2"></i>        
+                </a>
+            </li>
+          
+
+           
+             
+            
+        
+            </ul>
+            </div>
+             
+        </a>
+        </d>
     </div>
 </div>
 
