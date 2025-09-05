@@ -55,13 +55,10 @@
 
 
         <!-- create section -->
-        <d  iv class="d-flex gap-3 align-items-center ">
+        <div class="d-flex gap-3 align-items-center ">
             <?php 
             if(isset($_SESSION['ticket'])){
-                echo "
-                <h6>Welcome {$_SESSION['ticket']}</h6>
-                
-                ";
+                echo "<h6>Welcome {$_SESSION['ticket']}</h6> ";
             }
             ?>
             <button
@@ -108,30 +105,29 @@
 
             <!-- login-signup k shashke  -->
            <div class="d-none log-form px-2 justify-content-center position-absolute bg-white shadow rounded-3 align-items-center" style="top: 110%;width: 150px;right: 0;">
+           
             <ul class="list-unstyled my-2">
                
-                  <li class="bg-primary px-4 mb-2 rounded-pill">
-                  <a href="./logout.php" class="text-decoration-none text-white">
+                  
+            <li class="bg-primary px-4 mb-2 rounded-pill">
+                  <a href="./login-form.php" class="text-decoration-none text-white">
                     Log in <i class="bi bi-box-arrow-in-right mx-2"></i>
                 </a>
-            </li>
+            </li>       
+            
               
                 <li class="bg-danger px-3 rounded-pill">
-                    <a href="#" class="text-white text-decoration-none">
+                    <a href="./login-form.php" class="text-white text-decoration-none">
                     Log out<i class="bi bi-box-arrow-left mx-2"></i>        
                 </a>
             </li>
-          
-
-           
-             
+         
             
-        
             </ul>
             </div>
              
         </a>
-        </d>
+        </div>
     </div>
 </div>
 

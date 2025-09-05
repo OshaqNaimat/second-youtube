@@ -18,7 +18,7 @@
 
     mysqli_query($connection,$insert);
 
-    header("Location: http://localhost:3000/create-video.php");
+    header("Location: http://localhost:3000/index.php");
     
 
 ?>

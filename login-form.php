@@ -205,7 +205,6 @@ if(isset($_SESSION['ticket'])){
         </div>
         
 
-        <?php unset($_SESSION['ticket']);?>
         <!-- Signup Form (Initially Hidden) -->
          
         <div id="signupForm" style="display: none;">

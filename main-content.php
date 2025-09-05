@@ -44,7 +44,9 @@
 <div class="row my-4">
     <?php 
         include './config.php';
-        $videos = "SELECT * FROM video_preview";
+        $videos = "SELECT video_preview.id AS video_id,video_preview.title,video_preview.description,video_preview.video,video_preview.thumbnail,
+video_preview.schedule,users.id,users.Name FROM video_preview JOIN users ON video_preview.user_id = users.id
+";
         $result = mysqli_query($connection,$videos);
         foreach($result as $item){
     ?>
@@ -64,7 +66,9 @@
                         <h6 class="m-0" style="font-size:0.8rem">
                             <?php echo $item['title'] ?>
                         </h6>
-                        <p class="text-secondary m-0" style="font-size:0.8rem">Username</p>
+                        <p class="text-secondary m-0" style="font-size:0.8rem">
+                             <?php echo $item['Name'] ?>
+                        </p>
                         <p class="text-secondary m-0 d-flex gap-2 align-items-center" style="font-size:0.8rem">
                             110K views <i class="bi bi-circle-fill" style="font-size:0.2rem"></i> 4 hours ago
                         </p>
