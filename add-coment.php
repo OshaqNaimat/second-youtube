@@ -6,7 +6,7 @@ $video_id = $_POST['video-id'];
 $user_id = $_SESSION['user_id'];
 $currentPage = $_SERVER['HTTP_REFERER'];
 
-$addComment = "INSERT INTO comment (comment,video_id,user_id) VALUES ('$comment',$video_id,$user_id)";
+$addComment = "INSERT INTO comment (comment,video_id,users_id) VALUES ('$comment',$video_id,$user_id)";
 $result = mysqli_query($connection,$addComment);
 if($result)
 {
@@ -14,3 +14,4 @@ if($result)
 }
 header("Location: $currentPage");
 ?>
+
