@@ -59,6 +59,8 @@
             <?php 
             if(isset($_SESSION['ticket'])){
                 echo "<h6>Welcome {$_SESSION['ticket']}</h6> ";
+            }else{
+                echo "not loggged in";
             }
             ?>
             <button

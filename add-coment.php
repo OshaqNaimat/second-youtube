@@ -10,8 +10,9 @@ $addComment = "INSERT INTO comment (comment,video_id,users_id) VALUES ('$comment
 $result = mysqli_query($connection,$addComment);
 if($result)
 {
-    $_SESSION['comment_added'] = 'Comment added successfully';
+   echo "good";
+}else{
+    echo "bad";
 }
-header("Location: $currentPage");
 ?>
 

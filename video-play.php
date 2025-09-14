@@ -63,7 +63,26 @@ session_start();
 
 
                 <!-- comment section -->
-                <form action="./add-coment.php" class="" method="post">
+
+
+                <!-- all comments -->
+                 <?php 
+                 include './config.php';
+                 $videoid = $_GET['id'];
+                 $count = "SELECT COUNT(id) AS total_comments FROM comment WHERE video_id = $videoid";
+                 $countComment = mysqli_query($connection,$count);
+                 foreach($countComment as $item){
+
+                 
+                 ?>
+
+                 <h5>
+                    <?php echo $item['total_comments']?> Comments
+                 </h5>
+                 <?php 
+                
+                }?>
+                <form  >
                     <div class="d-flex gap-2 w-100 mt-3 mb-2">
 
                         <img src="https://images.vexels.com/media/users/3/147101/isolated/lists/b4a49d4b864c74bb73de63f080ad7930-instagram-profile-button.png"
@@ -73,10 +92,12 @@ session_start();
                     </div>
                     <div class="d-none justify-content-end gap-3 comment-btn-div">
                         <button type="button" class="btn cancel-btn bg-body-secondary rounded-pill px-3">Cancel</button>
-                        <button disabled class="btn bg-body-secondary comment-btn rounded-pill px-3 border-0">Comment</button>
+                        <button type="button" disabled class="btn bg-body-secondary comment-btn rounded-pill px-3 border-0">Comment</button>
                     </div>
                 </form>
-                <!-- all comments -->
+              
+
+               
                 <?php
                 include './config.php';
                 $video_id = $_GET['id'];
@@ -192,6 +213,22 @@ video_preview.schedule,users.id,users.Name FROM video_preview JOIN users ON vide
 
             }
         })
+
+        $('.comment-btn').on('click',()=>{
+            let comment = $('input[name="comment"]').val();
+            let video_id = $('input[name="video-id"]').val();
+            $.ajax({
+                url : './add-coment.php',
+                type : 'POST',
+                data :{
+                    comment,
+                    video_id
+                },
+                success: function(response){
+
+                }
+             })
+         })
     </script>
 
 </body>
