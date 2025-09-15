@@ -18,7 +18,7 @@
         <div class="row">
             <ul class="col-xl-2 col-md-1 d-none d-md-block list-unstyled sidebar-parent  p-3"
                 style="overflow-y: scroll;height:98vh">
-                <?php include './sidebar.php' ?>
+                <?php include './sidebar.php'?>
             </ul>
             <div class="col-xl-10 main-content col-md-11 col-sm-12 p-3" style="overflow-y: scroll;height:98vh">
                 <?php include './main-content.php'?>
