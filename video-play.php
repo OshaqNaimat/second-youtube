@@ -68,7 +68,7 @@ session_start();
                 <!-- all comments -->
                  <?php 
                  include './config.php';
-                 $videoid = $_GET['video-id'];
+                 $videoid = $_GET['id'];
                  $count = "SELECT COUNT(id) AS total_comments FROM comment WHERE video_id = $videoid";
                  
                  $countComment = mysqli_query($connection,$count);
@@ -84,13 +84,19 @@ session_start();
                  <?php 
                 
                 }?>
+
+                <div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
                 <form  >
                     <div class="d-flex gap-2 w-100 mt-3 mb-2">
 
                         <img src="https://images.vexels.com/media/users/3/147101/isolated/lists/b4a49d4b864c74bb73de63f080ad7930-instagram-profile-button.png"
                             width="30px" height="30px" class=" " alt="">
                         <input type="text" name="comment" class="w-100" style="border: none;border-bottom: 2px solid lightgray;outline-width: 0;" placeholder="Add a comment...">
-                        <input type="hidden" name="video-id" readonly value="<?php echo $_GET['video-id'] ?>">
+                        <input type="hidden" name="video-id" readonly value="<?php echo $_GET['id'] ?>">
                     </div>
                     <div class="d-none justify-content-end gap-3 comment-btn-div">
                         <button type="button" class="btn cancel-btn bg-body-secondary rounded-pill px-3">Cancel</button>
@@ -102,7 +108,7 @@ session_start();
                
                 <?php
                 include './config.php';
-                $video_id = $_GET['video-id'];
+                $video_id = $_GET['id'];
                 $getComments = "SELECT comment.id AS comment_id,comment.comment,users.id 
                               AS users_id,users.Name FROM comment JOIN users ON comment.users_id = users.id 
                               where comment.video_id = $video_id";
